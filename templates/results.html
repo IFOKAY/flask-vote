@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4">
+  <h3 class="mb-3">Voting Results</h3>
+  <ul class="list-group">
+    {% for candidate, count in results %}
+      <li class="list-group-item d-flex justify-content-between">
+        <span>{{ candidate }}</span>
+        <span>{{ count }} votes</span>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
